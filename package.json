@@ -1,5 +1,5 @@
 {
-  "author": "why",
+  "author": "iglake",
   "bugs": {},
   "gx": {
     "dvcsimport": "github.com/ipfs/go-verifcid"
@@ -23,6 +23,6 @@
   "license": "",
   "name": "go-verifcid",
   "releaseCmd": "git commit -a -m \"gx publish $VERSION\"",
-  "version": "0.1.2"
+  "version": "0.1.2-ml"
 }
 

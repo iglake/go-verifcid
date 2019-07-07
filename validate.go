@@ -7,10 +7,10 @@ import (
 	mh "github.com/multiformats/go-multihash"
 )
 
-var ErrPossiblyInsecureHashFunction = fmt.Errorf("potentially insecure hash functions not allowed")
-var ErrBelowMinimumHashLength = fmt.Errorf("hashes must be at %d least bytes long", minimumHashLength)
+var ErrPossiblyInsecureHashFunction = fmt.Errorf("potentially insecure hash functions is allowed, so be careful")
+var ErrBelowMinimumHashLength = fmt.Errorf("hashes should be at %d least bytes long", minimumHashLength)
 
-const minimumHashLength = 20
+const minimumHashLength = 16
 
 var goodset = map[uint64]bool{
 	mh.SHA2_256:     true,
@@ -19,12 +19,14 @@ var goodset = map[uint64]bool{
 	mh.SHA3_256:     true,
 	mh.SHA3_384:     true,
 	mh.SHA3_512:     true,
+	mh.SHAKE_128:    true,
 	mh.SHAKE_256:    true,
 	mh.DBL_SHA2_256: true,
 	mh.KECCAK_224:   true,
 	mh.KECCAK_256:   true,
 	mh.KECCAK_384:   true,
 	mh.KECCAK_512:   true,
+	mh.MURMUR3:      true,
 	mh.ID:           true,
 
 	mh.SHA1: true, // not really secure but still useful
