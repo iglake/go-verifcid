@@ -1,4 +1,4 @@
-module github.com/ipfs/go-verifcid
+module github.com/iglake/go-verifcid
 
 require (
 	github.com/ipfs/go-cid v0.0.1
